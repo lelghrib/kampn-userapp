@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="usersApp">
   <head>
     <meta charset="utf-8" />
-    <title>My HTML File</title>
+    <title>Kamp'n - User Management</title>
+
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+
     <script src="lib/angular/angular.js"></script>
+    <script src="app.module.js"></script>
+    <script src="user-list/user-list.module.js"></script>
+    <script src="user-list/user-list.component.js"></script>
   </head>
   <body>
-    <p>Nothing here {{'yet' + '!'}}</p>
-    <p>1 + 5 = {{1 + 5}}</p>
+    <h2>Kamp'n - user management</h2>
+    <h3>Users List</h3>
+    <user-list></user-list>
   </body>
 </html>

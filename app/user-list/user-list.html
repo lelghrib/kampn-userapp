@@ -1,0 +1,8 @@
+<h4>Total number of users : {{$ctrl.count}}</h4>
+<ul>
+  <li ng-repeat="user in $ctrl.users">
+    <p>{{user.firstName}}</p>
+    <p>{{user.lastName}}</p>
+    <p>{{user.email}}</p>
+  </li>
+</ul>
