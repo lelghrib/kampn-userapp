@@ -1,0 +1,12 @@
+<header>
+  <div class="header">
+    <img src="{{$ctrl.logo}}" alt="Logo" />
+    <div>
+      <ul>
+        <li ng-repeat="link in $ctrl.links">
+          <a href="{{link.url}}" class="link"> {{link.name}} </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
