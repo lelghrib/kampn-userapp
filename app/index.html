@@ -20,6 +20,8 @@
     <div class="main">
       <div class="content-wrapper">
         <user-list></user-list>
+        <!-- <user-create></user-create> -->
+        <div ng-view></div>
       </div>
     </div>
     <home-footer></home-footer>
@@ -27,11 +29,15 @@
     <!-- SCRIPTS -->
     <script src="lib/angular/angular.js"></script>
     <script src="app.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="app.config.js"></script>
     <script src="user-list/user-list.module.js"></script>
     <script src="user-list/user-list.component.js"></script>
     <script src="layout/home-footer.module.js"></script>
     <script src="layout/home-footer.component.js"></script>
     <script src="layout/home-header.module.js"></script>
     <script src="layout/home-header.component.js"></script>
+    <script src="user-create/user-create.module.js"></script>
+    <script src="user-create/user-create.component.js"></script>
   </body>
 </html>

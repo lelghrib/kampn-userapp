@@ -9,6 +9,10 @@ h3 {
   margin-bottom: 28px;
 }
 
+input {
+  color: black;
+}
+
 .header {
   padding: 32px;
   background-color: #ffffff;
@@ -94,6 +98,8 @@ h3 {
 .content-wrapper {
   max-width: 1200px;
   margin: auto;
+  display: flex;
+  flex-direction: row;
 }
 
 .user-list {
