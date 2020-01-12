@@ -6,7 +6,7 @@ angular.module("userList").component("userList", {
     "$http",
     function UserListController($http) {
       var self = this;
-      // self.orderProp = "lastName";
+      // self.orderProp = "id";
 
       $http
         .get("https://trainee-api.pleiads.fr/users")

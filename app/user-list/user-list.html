@@ -1,8 +1,11 @@
-<h4>Total number of users : {{$ctrl.count}}</h4>
-<ul>
-  <li ng-repeat="user in $ctrl.users">
-    <p>{{user.firstName}}</p>
-    <p>{{user.lastName}}</p>
-    <p>{{user.email}}</p>
-  </li>
-</ul>
+<div >
+  <h1>Users</h1>
+  <h3>Number of users : {{$ctrl.count}}</h3>
+  <ul class="user-list">
+    <li ng-repeat="user in $ctrl.users" class="user-card">
+      <p> <b>Firstname:</b> {{user.firstName}}</p>
+      <p> <b>Lastname:</b> {{user.lastName}}</p>
+      <p> <b>Email:</b> {{user.email}}</p>
+    </li>
+  </ulclass="user-list">
+</div>

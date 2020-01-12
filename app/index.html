@@ -1,19 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="usersApp">
+<html lang="en" ng-app="app">
   <head>
     <meta charset="utf-8" />
+    <meta name="description" content="User management app" />
+    <meta name="keywords" content="userManagement,app" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kamp'n - User Management</title>
-
+    <!-- STYLE & CSS-->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900,300italic,400italic|Poppins:100,200,300,400,500,600,700,800,900,300italic,400italic&amp;subset=latin,latin-ext"
+      rel="stylesheet"
+      type="text/css"
+    />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body class="body">
+    <home-header></home-header>
+    <div class="main">
+      <div class="content-wrapper">
+        <user-list></user-list>
+      </div>
+    </div>
+    <home-footer></home-footer>
 
+    <!-- SCRIPTS -->
     <script src="lib/angular/angular.js"></script>
-    <script src="app.module.js"></script>
+    <script src="app.js"></script>
     <script src="user-list/user-list.module.js"></script>
     <script src="user-list/user-list.component.js"></script>
-  </head>
-  <body>
-    <h2>Kamp'n - user management</h2>
-    <h3>Users List</h3>
-    <user-list></user-list>
+    <script src="layout/home-footer.module.js"></script>
+    <script src="layout/home-footer.component.js"></script>
+    <script src="layout/home-header.module.js"></script>
+    <script src="layout/home-header.component.js"></script>
   </body>
 </html>
