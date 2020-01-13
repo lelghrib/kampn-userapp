@@ -6,18 +6,14 @@ angular.module("userCreate").component("userCreate", {
     "$http",
     "$scope",
     "$route",
-    function userCreateController($http, $scope, $route) {
+    function userCreateController($http, $scope, $location) {
       $scope.master = {};
-      // var self = this;
-      // self.orderProp = "id";
 
       $scope.create = function(user) {
         $scope.master = angular.copy(user);
         $http.post("https://trainee-api.pleiads.fr/users", user).then(
           function(response) {
-            // handle response & error
-            // display list of users
-            $route.reload();
+            $location.reload();
           },
           function(error) {
             // handle error

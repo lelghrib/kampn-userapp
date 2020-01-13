@@ -3,7 +3,14 @@ angular.module("app").config([
   function config($routeProvider) {
     $routeProvider
       .when("/", {
-        template: "<user-create></user-create>"
+        template:
+          '<div class="content-wrapper">' +
+          "<user-list></user-list>" +
+          "<user-create></user-create>" +
+          "</div>"
+      })
+      .when("/all", {
+        template: "<user-list></user-list>"
       })
       .otherwise("/");
   }
