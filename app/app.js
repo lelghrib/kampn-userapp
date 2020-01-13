@@ -1,1 +1,7 @@
-angular.module("app", ["userList", "homeFooter", "homeHeader"]);
+angular.module("app", [
+  "userList",
+  "homeFooter",
+  "homeHeader",
+  "userCreate",
+  "ngRoute"
+]);
