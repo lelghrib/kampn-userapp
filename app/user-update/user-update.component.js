@@ -42,7 +42,7 @@ angular.module("userUpdate").component("userUpdate", {
                   self.hideConfirmation = true;
                   $location.path("/");
                 });
-              }, 3000);
+              }, 2500);
             },
             function(error) {
               // handle error
@@ -64,7 +64,7 @@ angular.module("userUpdate").component("userUpdate", {
                   self.deleteConfirmation = true;
                   $location.path("/");
                 });
-              }, 3000);
+              }, 2500);
             },
             function(error) {
               // handle error

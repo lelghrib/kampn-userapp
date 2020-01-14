@@ -22,7 +22,7 @@ angular.module("userCreate").component("userCreate", {
                 self.hideConfirmation = true;
                 $route.reload();
               });
-            }, 3000);
+            }, 2500);
           },
           function(error) {
             // handle error
