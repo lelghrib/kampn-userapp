@@ -1,5 +1,7 @@
 <form name="form" class="css-form" novalidate>
-  <p ng-hide="$ctrl.hideConfirmation" class="confirm-msg"> User has been updated with success!</p>    
+  <p ng-hide="$ctrl.hideConfirmation" class="confirm-msg green"> User has been updated with success!</p>    
+  <p ng-hide="$ctrl.deleteConfirmation" class="confirm-msg red"> User has been updated with success!</p>    
+
   <section>
     <label>First name *</label>
     <input
@@ -53,6 +55,7 @@
       value="Update user"
       class="button"
     />
+    <input type="button" ng-click="delete(user)" value="Delete" class="button" />
   </br>
     <!-- <div ng-show="form.$submitted" class="error">
       <span ng-show="$ctrl.error" 

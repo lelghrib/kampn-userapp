@@ -1,13 +1,13 @@
-<div>
+<div class="list-header">
   <h1>Users</h1>
   <h4>Number of users : {{$ctrl.count}}</h4>
   <div class="horizontal-container ">
     FILTRE
-    <input ng-model="$ctrl.query" class="search-input" />
+    <input ng-model="$ctrl.query" class="filtre-input" />
   </div>
   <div class="horizontal-container ">
     SORT BY
-    <select ng-model="$ctrl.orderProp" class="search-input">
+    <select ng-model="$ctrl.orderProp" class="filtre-input">
       <option value="firstName">Alphabetical</option>
       <option value="-id" ng-class="{reverse: reverse}">Newest</option>
     </select>

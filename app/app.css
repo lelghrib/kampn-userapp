@@ -9,6 +9,15 @@ h4 {
   margin-bottom: 28px;
 }
 
+h1 {
+  font-size: 68px;
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 35px;
+  }
+}
+
 .header {
   padding: 32px;
   background-color: #ffffff;
@@ -147,6 +156,15 @@ h4 {
 .user-card:hover {
   background-color: rgba(255, 255, 255, 0.9);
 }
+@media screen and (max-width: 480px) {
+  .user-card {
+    width: 250px;
+  }
+  .users-container {
+    padding-inline-start: 0px;
+  }
+}
+
 .avatar {
   width: 45px;
   height: 45px;
@@ -195,7 +213,7 @@ label {
   border-width: 0px;
   padding-left: 36px;
   padding-right: 36px;
-  margin: 0px 16px 0px 16px;
+  margin: 2px 16px 2px 16px;
 }
 .button:hover {
   background-color: #d8281c;
@@ -223,7 +241,7 @@ section {
 .button-container {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  flex-wrap: wrap;
   padding: 16px;
 }
 .button-container div {
@@ -231,7 +249,7 @@ section {
   border-right: 1px solid lightgrey;
 }
 
-.search-input {
+.filtre-input {
   background-color: transparent;
   border-width: 1px;
   border-color: white;
@@ -240,10 +258,18 @@ section {
   width: 250px;
   margin-bottom: 8px;
 }
-.search-input:focus {
+.filtre-input:focus {
   outline: none;
 }
-
+@media screen and (max-width: 480px) {
+  .filtre-input {
+    width: 200px;
+  }
+  .list-header {
+    width: 100vw;
+    padding: 8px;
+  }
+}
 .error {
   color: #ed3324;
   font-weight: 500;
@@ -263,10 +289,17 @@ a:hover {
 }
 
 .confirm-msg {
-  color: #13994b;
   font-size: 16px;
   font-weight: 500;
   align-self: center;
   padding-top: 16px;
   text-align: center;
+}
+
+.green {
+  color: #13994b;
+}
+
+.red {
+  color: #ed3324;
 }
