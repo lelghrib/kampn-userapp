@@ -254,3 +254,19 @@ section {
   flex-direction: row;
   justify-content: space-between;
 }
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.confirm-msg {
+  color: #13994b;
+  font-size: 16px;
+  font-weight: 500;
+  align-self: center;
+  padding-top: 16px;
+  text-align: center;
+}

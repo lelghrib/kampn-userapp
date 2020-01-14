@@ -3,5 +3,6 @@ angular.module("app", [
   "homeFooter",
   "homeHeader",
   "userCreate",
+  "userUpdate",
   "ngRoute"
 ]);

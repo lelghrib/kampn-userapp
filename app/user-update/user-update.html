@@ -1,0 +1,63 @@
+<form name="form" class="css-form" novalidate>
+  <p ng-hide="$ctrl.hideConfirmation" class="confirm-msg"> User has been updated with success!</p>    
+  <section>
+    <label>First name *</label>
+    <input
+      type="text"
+      ng-model="$ctrl.user.firstName"
+      name="uFirstname"
+      required=""
+      class="input"
+    />
+    <br />
+    <div ng-show="form.$submitted" class="error">
+      <div ng-show="form.uFirstname.$error.required" >The firstname is required</div>
+    </div>
+  </section>
+  <section>
+    <label>Last name *</label>
+    <input
+      type="text"
+      ng-model="$ctrl.user.lastName"
+      name="uLastname"
+      required=""
+      class="input"
+    />
+    <br />
+    <div ng-show="form.$submitted" class="error">
+      <div ng-show="form.uLastname.$error.required" >The lastname is required</div>
+    </div>
+  </section>
+  <section>
+    <label>E-mail * </label>
+    <input
+      type="email"
+      ng-model="$ctrl.user.email"
+      name="uEmail"
+      required=""
+      class="input"
+    />
+    <br />
+    <div ng-show="form.$submitted" class="error">
+      <span ng-show="form.uEmail.$error.required" >The email is required</span>
+      <span ng-show="form.uEmail.$error.email"
+        >The email entered is not valid</span
+      >
+    </div>
+  </section>
+  <div class="button-container">
+    <input type="button" ng-click="cancel(form)" value="Cancel" class="button" />
+    <input
+      type="submit"
+      ng-click="update($ctrl.user)"
+      value="Update user"
+      class="button"
+    />
+  </br>
+    <!-- <div ng-show="form.$submitted" class="error">
+      <span ng-show="$ctrl.error" 
+        >Something went wrong when submitting the form. {{$ctrl.error}}</span
+      >
+    </div> -->
+  </div>
+</form>
