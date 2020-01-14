@@ -17,13 +17,16 @@
     <ul class="user-list">
       <li
         ng-repeat="user in $ctrl.users | filter:$ctrl.query | orderBy:$ctrl.orderProp"
-        class="user-card"
       >
-        <img src="/assets/account.png" alt="Logo" class="avatar" />
-        <div>
-          <p><label>Name</label> {{user.firstName}} {{user.lastName}}</p>
-          <p><label>Email</label> {{user.email}}</p>
-        </div>
+        <a href="#!/{{user.id}}" class="thumb">
+          <div class="user-card">
+            <img src="/assets/account.png" alt="avatar" class="avatar" />
+            <div>
+              <p><label>Name</label> {{user.firstName}} {{user.lastName}}</p>
+              <p><label>Email</label> {{user.email}}</p>
+            </div>
+          </div>
+        </a>
       </li>
     </ul>
   </div>

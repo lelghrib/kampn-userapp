@@ -9,8 +9,12 @@ angular.module("app").config([
           "<user-create></user-create>" +
           "</div>"
       })
-      .when("/all", {
-        template: "<user-list></user-list>"
+      .when("/:userId", {
+        template:
+          '<div class="content-wrapper">' +
+          "<user-list></user-list>" +
+          "<user-update></user-update>" +
+          "</div>"
       })
       .otherwise("/");
   }

@@ -1,10 +1,10 @@
 <form name="form" class="css-form" novalidate>
-  <p ng-hide="$ctrl.hideConfirmation" class="confirm-msg"> User has been created with success!</p>    
+  <p ng-hide="$ctrl.hideConfirmation" class="confirm-msg"> User has been updated with success!</p>    
   <section>
     <label>First name *</label>
     <input
       type="text"
-      ng-model="user.firstName"
+      ng-model="$ctrl.user.firstName"
       name="uFirstname"
       required=""
       class="input"
@@ -18,7 +18,7 @@
     <label>Last name *</label>
     <input
       type="text"
-      ng-model="user.lastName"
+      ng-model="$ctrl.user.lastName"
       name="uLastname"
       required=""
       class="input"
@@ -32,7 +32,7 @@
     <label>E-mail * </label>
     <input
       type="email"
-      ng-model="user.email"
+      ng-model="$ctrl.user.email"
       name="uEmail"
       required=""
       class="input"
@@ -46,18 +46,18 @@
     </div>
   </section>
   <div class="button-container">
-      <input type="button" ng-click="reset(form)" value="Cancel" class="button" />
+    <input type="button" ng-click="cancel(form)" value="Cancel" class="button" />
     <input
       type="submit"
-      ng-click="create(user)"
-      value="Add user"
+      ng-click="update($ctrl.user)"
+      value="Update user"
       class="button"
     />
   </br>
-    <div ng-show="form.$submitted" class="error">
+    <!-- <div ng-show="form.$submitted" class="error">
       <span ng-show="$ctrl.error" 
         >Something went wrong when submitting the form. {{$ctrl.error}}</span
       >
-    </div>
+    </div> -->
   </div>
 </form>
