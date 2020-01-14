@@ -8,12 +8,21 @@ angular.module("userCreate").component("userCreate", {
     "$route",
     function userCreateController($http, $scope, $route) {
       $scope.master = {};
+      var self = this;
+      self.hideConfirmation = true;
 
       $scope.create = function(user) {
         $scope.master = angular.copy(user);
         $http.post("https://trainee-api.pleiads.fr/users", user).then(
+          //confirmation msg to user & redirect
           function(response) {
-            $route.reload();
+            self.hideConfirmation = false;
+            setTimeout(function() {
+              $scope.$apply(function() {
+                self.hideConfirmation = true;
+                $route.reload();
+              });
+            }, 3000);
           },
           function(error) {
             // handle error
